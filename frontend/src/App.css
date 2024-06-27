@@ -1,0 +1,47 @@
+.app {
+  display: grid;
+  gap: 50px;
+  grid-template-areas:
+  "header"
+  "wrapper"
+  "footer";
+}
+
+.wrapper {
+  grid-area: wrapper;
+  width: 1000px;
+  gap: 50px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+  "form search-bar search-bar search-bar search-bar search-bar"
+  "form book-list book-list book-list book-list book-list";
+}
+
+.header {
+  grid-area: header;
+}
+
+.search-bar {
+  grid-area: search-bar;
+
+}
+
+.form {
+  grid-area: form;
+}
+
+.book-list {
+  grid-area: book-list;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.book-list, .form, .search-bar {
+  background-color: var(--window_bg_color);
+  border-radius: var(--window_border_radius);
+  box-shadow: var(--window_shadow);
+  padding: var(--window_padding);
+}

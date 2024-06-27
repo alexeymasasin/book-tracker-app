@@ -2,7 +2,7 @@ import styles from './Header.module.css';
 
 function Header() {
   return (
-    <header>
+    <header className={`header ${styles.header}`}>
       <div className={styles.header_container}>
         <h1>Book Tracker App</h1>
       </div>
