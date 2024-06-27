@@ -10,8 +10,10 @@ const App = () => {
       <Header/>
       <div className="wrapper">
         <Form/>
-        <SearchBar/>
-        <BookList/>
+        <div className="wrapper-right">
+          <SearchBar/>
+          <BookList/>
+        </div>
       </div>
     </div>
   );

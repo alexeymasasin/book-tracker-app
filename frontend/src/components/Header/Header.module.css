@@ -1,6 +1,7 @@
 .header {
   background-color: var(--accent_color);
   height: 90px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,4 +22,10 @@
   justify-content: center;
   width: 80%;
   height: 100%;
+}
+
+@media (max-width: 650px) {
+  .header h1 {
+    font-size: 2rem;
+  }
 }

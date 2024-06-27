@@ -1,11 +1,12 @@
-.form {
+.window {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   gap: 20px;
   align-items: center;
 }
 
-.form > form {
+.window > form {
   display: flex;
   gap: 14px;
   width: 260px;
@@ -13,16 +14,15 @@
   align-items: center;
 }
 
-.form label {
+.window label {
   display: flex;
   flex-direction: column;
   gap: 4px;
   font-size: 1.2rem;
 }
 
-.form > form input {
+.window > form input {
   width: 100%;
-  box-sizing: border-box;
   font-size: 1.3rem;
   display: block;
   border: 2px solid var(--text_color_secondary);
@@ -32,36 +32,56 @@
   transition: all 0.3s;
 }
 
-.form > form input:focus {
+.window > form input:focus {
   outline: 1px solid var(--accent_color);
 }
 
-.form > form button {
+.window > form button {
   background-color: var(--accent_color);
   color: var(--text_color_contrast);
   font-size: 1.2rem;
   border: none;
   border-radius: 7px;
   padding: 10px 20px;
-  margin: 20px 0 14px;
+  margin: 20px 0 0;
   cursor: pointer;
   outline: 1px solid transparent;
   transition: all 0.3s;
 }
 
-.form > form button:focus {
+.window > form button:focus {
   box-shadow: var(--window_shadow);
   outline: 1px solid var(--accent_color);
 }
 
 @media (hover: hover) {
-  .form > form button:hover {
+  .window > form button:hover {
     background-color: var(--accent_color_darker);
   }
 }
 
 @media (hover: none) {
-  .form > form button:active {
+  .window > form button:active {
     background-color: var(--accent_color_darker);
+  }
+}
+
+@media (max-width: 1050px) {
+  .window {
+    width: calc(100% - 60px);
+  }
+
+  .window label {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .window form {
+    margin: 0 auto;
+    width: calc(100%);
+  }
+
+  .window > form input {
+    box-sizing: border-box;
   }
 }
