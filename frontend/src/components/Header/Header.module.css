@@ -11,6 +11,8 @@
   text-align: center;
   font-size: 3rem;
   font-weight: 300;
+  padding-bottom: 5px;
+  user-select: none;
 }
 
 .header_container {

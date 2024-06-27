@@ -25,15 +25,15 @@
   box-sizing: border-box;
   font-size: 1.3rem;
   display: block;
-  border: 1px solid var(--text_color_secondary);
+  border: 2px solid var(--text_color_secondary);
   border-radius: 6px;
   padding: 8px 10px;
-  outline: 2px solid transparent;
+  outline: 1px solid transparent;
   transition: all 0.3s;
 }
 
 .form > form input:focus {
-  outline: 2px solid var(--accent_color);
+  outline: 1px solid var(--accent_color);
 }
 
 .form > form button {
@@ -41,16 +41,17 @@
   color: var(--text_color_contrast);
   font-size: 1.2rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 7px;
   padding: 10px 20px;
   margin: 20px 0 14px;
   cursor: pointer;
+  outline: 1px solid transparent;
   transition: all 0.3s;
 }
 
 .form > form button:focus {
-  outline: none;
   box-shadow: var(--window_shadow);
+  outline: 1px solid var(--accent_color);
 }
 
 @media (hover: hover) {

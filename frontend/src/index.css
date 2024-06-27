@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --bg_color: #F5F5F5;
+  --bg_color: #EFEDF5;
   --window_bg_color: #FFFFFF;
-  --accent_color: #0484D1;
-  --accent_color_darker: #0c6aa6;
-  --selection_color: #dcdcdc;
+  --accent_color: #211D31;
+  --accent_color_darker: #1A1824;
+  --selection_color: #e1e1da;
 
-  --text_color_primary: #111111;
-  --text_color_secondary: rgba(17, 17, 17, 0.39);
+  --text_color_primary: #1A1824;
+  --text_color_secondary: #666666;
   --text_color_contrast: var(--window_bg_color);
 
   --delete_color: #F24940;
@@ -17,7 +17,7 @@
 
   --window_border_radius: 10px;
   --window_padding: 24px 12px;
-  --window_shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+  --window_shadow: 0 0 50px -20px rgba(0, 0, 0, 0.2);
 }
 
 * {
