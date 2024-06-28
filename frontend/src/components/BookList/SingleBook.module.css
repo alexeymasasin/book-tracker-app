@@ -1,0 +1,40 @@
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: -2px;
+}
+
+.wrapper {
+  flex: 1;
+  margin: 0 -24px;
+  padding: 24px;
+  transition: all 0.2s;
+  border-top: 2px solid var(--selection_color);
+}
+
+.last_child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.wrapper:hover {
+  background-color: var(--selection_color);
+}
+
+.wrapper > * {
+  display: inline-block;
+}
+
+.title {
+  font-size: 1.3rem;
+}
+
+.author {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.index {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
