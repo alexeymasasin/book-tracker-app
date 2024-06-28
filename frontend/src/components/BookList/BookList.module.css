@@ -36,6 +36,7 @@
   padding: 16px 0;
   border-top-left-radius: var(--window_border_radius);
   border-top-right-radius: var(--window_border_radius);
+  transition: all 0.65s;
 }
 
 @media (max-width: 1050px) {

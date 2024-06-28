@@ -16,6 +16,7 @@
   padding: 16px 0;
   border-top-left-radius: var(--window_border_radius);
   border-top-right-radius: var(--window_border_radius);
+  transition: all 0.3s;
 }
 
 .window > form {
@@ -34,6 +35,8 @@
 }
 
 .window > form input {
+  background-color: var(--window_bg_color);
+  color: var(--text_color_primary);
   width: 100%;
   font-size: 1.3rem;
   display: block;
@@ -41,7 +44,7 @@
   border-radius: 4px;
   padding: 8px 10px;
   outline: 1px solid transparent;
-  transition: all 0.3s;
+  transition: all 0.65s;
 }
 
 .window > form input:focus {
@@ -68,6 +71,9 @@
 .window > form button:focus {
   box-shadow: var(--window_shadow);
   outline: 1px solid var(--accent_color);
+}
+
+.window > form button:active {
 }
 
 @media (hover: hover) {

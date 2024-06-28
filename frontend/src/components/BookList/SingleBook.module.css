@@ -5,11 +5,17 @@ li {
 }
 
 .wrapper {
+  display: flex;
   flex: 1;
   margin: 0 -24px;
   padding: 24px;
   transition: all 0.2s;
   border-top: 2px solid var(--selection_color);
+  font-size: 1.3rem;
+}
+
+.book_info {
+  width: 70%;
 }
 
 .last_child {
@@ -21,20 +27,19 @@ li {
   background-color: var(--selection_color);
 }
 
-.wrapper > * {
-  display: inline-block;
+.wrapper p {
+  display: inline;
 }
 
 .title {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 
 .author {
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 
 .index {
-  font-size: 1.3rem;
   font-weight: 500;
 }
