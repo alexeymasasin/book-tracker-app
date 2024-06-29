@@ -4,9 +4,11 @@
   "AUTHOR": "Author:",
   "RELEASE_YEAR": "Release Year:",
   "ADD_BOOK": "Add Book",
-  "": "",
   "NO_BOOKS_AVAILABLE": "No books available",
   "BOOK_LIST": "Book List",
   "R_YEAR": "",
-  "BY": "by"
+  "BY": "by",
+  "TURN_LIGHT": "Switch to light mode",
+  "TURN_DARK": "Switch to Dark mode",
+  "CHANGE_LANGUAGE": "Switch language to Russian"
 }

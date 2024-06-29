@@ -2,7 +2,6 @@ import './App.css';
 import Header from './components/Header/Header';
 import BookList from './components/BookList/BookList';
 import Form from './components/Form/Form';
-import SearchBar from './components/SearchBar/SearchBar';
 
 const App = () => {
   return (
@@ -11,7 +10,7 @@ const App = () => {
       <div className="wrapper">
         <Form/>
         <div className="wrapper-right">
-          <SearchBar/>
+          {/*<SearchBar/>*/}
           <BookList/>
         </div>
       </div>

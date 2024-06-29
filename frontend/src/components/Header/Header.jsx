@@ -1,11 +1,13 @@
 import styles from './Header.module.css';
 import {PiBookOpenTextThin} from 'react-icons/pi';
-import {MdDarkMode, MdOutlineDarkMode} from 'react-icons/md';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import {useTranslation} from 'react-i18next';
 import {HiOutlineLanguage} from 'react-icons/hi2';
 import i18n from './../../i18n';
 import {useState} from 'react';
+import {IoInvertMode} from 'react-icons/io5';
+import HeaderButton from '../UI/HeaderButton';
+import {AnimatePresence, motion} from 'framer-motion';
 
 function Header() {
 
@@ -67,21 +69,29 @@ function Header() {
 
   return (
     <header className={`header ${styles.wrapper}`}>
-      <div className={styles.container}>
-        <button className={styles.translate_btn}
-                title={t('CHANGE_LANGUAGE')} onClick={languageChangeHandler}>
+      <motion.div className={styles.container}>
+        <HeaderButton sign="translate_btn"
+                      title={t('CHANGE_LANGUAGE')}
+                      onClick={languageChangeHandler}>
           <HiOutlineLanguage/>
-        </button>
+        </HeaderButton>
         <div className={styles.logo}>
           <h1>Book Tracker App</h1>
           <PiBookOpenTextThin className={styles.icon}/>
         </div>
-        <button className={styles.theme_btn}
-                title={themeTitleHandler()} onClick={themeChangeHandler}>
-          {themeData === 'light' ? <MdDarkMode/> :
-            <MdOutlineDarkMode/>}
-        </button>
-      </div>
+        <AnimatePresence>
+
+          <HeaderButton sign="darkmode_btn"
+                        title={themeTitleHandler()}
+                        onClick={themeChangeHandler}
+                        themeData={themeData}
+          >
+            <IoInvertMode/>
+
+          </HeaderButton>
+        </AnimatePresence>
+
+      </motion.div>
     </header>
   );
 }

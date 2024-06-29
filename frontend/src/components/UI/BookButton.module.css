@@ -1,0 +1,25 @@
+.ui {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--text_color_primary);
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: all 0.25s;
+}
+
+.ui:active {
+  transform: scale(0.9);
+}
+
+@media (hover: hover) {
+  .ui:hover {
+    transform: scale(1.1);
+  }
+
+  .ui:active {
+    transform: scale(0.9);
+  }
+}

@@ -21,7 +21,7 @@ const BookList = () => {
               {books.map((book, i) => (
                 <SingleBook title={book.title} author={book.author}
                             releaseDate={book.releaseDate}
-                            key={book.id} index={i}
+                            key={book.id} id={book.id} index={i}
                             lastChild={i === books.length - 1}/>
               ))}
             </ul>

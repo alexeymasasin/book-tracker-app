@@ -24,6 +24,7 @@ const Form = () => {
         title: capitalize(title.trim()),
         author: capitalize(author.trim()),
         releaseDate: releaseDate.trim(),
+        rating: 0,
         id: uuidv4(),
       };
       dispatch(addBook(book));
@@ -57,7 +58,7 @@ const Form = () => {
         <button disabled={!(title && author && releaseDate)}
                 className={!(title && author && releaseDate)
                   ? styles.disabled : ''}
-                type="submit">
+                type="submit" title={t('ADD_NEW_BOOK')}>
           {t('ADD_BOOK')}
         </button>
       </form>
