@@ -2,6 +2,7 @@ import styles from './BookList.module.css';
 import {useSelector} from 'react-redux';
 import SingleBook from './SingleBook';
 import {useTranslation} from 'react-i18next';
+import {AnimatePresence, motion} from 'framer-motion';
 
 const BookList = () => {
   const books = useSelector(state => state.books);
@@ -9,7 +10,7 @@ const BookList = () => {
   const {t} = useTranslation();
 
   return (
-    <div className={`book-list ${styles.window}`}>
+    <motion.div className={`book-list ${styles.window}`}>
       <div className={styles.heading}>
         <h2>{t('BOOK_LIST')}</h2>
       </div>
@@ -17,18 +18,20 @@ const BookList = () => {
         {
           books.length === 0 ?
             <p>{t('NO_BOOKS_AVAILABLE')}</p> :
-            <ul>
+            <motion.ul>
               {books.map((book, i) => (
-                <SingleBook title={book.title} author={book.author}
-                            releaseDate={book.releaseDate}
-                            key={book.id} id={book.id} index={i}
-                            lastChild={i === books.length - 1}
-                            isFavorite={book.isFavorite}/>
+                <AnimatePresence>
+                  <SingleBook title={book.title} author={book.author}
+                              releaseDate={book.releaseDate}
+                              key={book.id} id={book.id} index={i}
+                              lastChild={i === books.length - 1}
+                              isFavorite={book.isFavorite}/>
+                </AnimatePresence>
               ))}
-            </ul>
+            </motion.ul>
         }
       </div>
-    </div>
+    </motion.div>
   );
 };
 

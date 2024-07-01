@@ -4,6 +4,7 @@ import {deleteBook, toggleFavorite} from '../../redux/books/actionCreators';
 import {useDispatch} from 'react-redux';
 import {MdOutlineBookmarkBorder, MdOutlineDeleteOutline} from 'react-icons/md';
 import BookButton from '../UI/BookButton';
+import {motion} from 'framer-motion';
 
 function SingleBook({
   title,
@@ -27,7 +28,9 @@ function SingleBook({
   };
 
   return (
-    <li>
+    <motion.li initial={{opacity: 0}}
+               animate={{opacity: 1}}
+               exit={{opacity: 0}} duration={1000}>
       <div
         className={`${styles.wrapper} ${lastChild ? styles.last_child : ''}`}>
         <div className={styles.info}>
@@ -60,7 +63,7 @@ function SingleBook({
           </div>
         </div>
       </div>
-    </li>
+    </motion.li>
   );
 }
 
