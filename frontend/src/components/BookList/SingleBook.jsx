@@ -2,7 +2,7 @@ import styles from './SingleBook.module.css';
 import {useTranslation} from 'react-i18next';
 import {deleteBook} from '../../redux/books/actionCreators';
 import {useDispatch} from 'react-redux';
-import {MdOutlineDeleteOutline, MdOutlineStarOutline} from 'react-icons/md';
+import {MdOutlineBookmarkBorder, MdOutlineDeleteOutline} from 'react-icons/md';
 import BookButton from '../UI/BookButton';
 
 function SingleBook({title, author, releaseDate, id, index, lastChild}) {
@@ -38,8 +38,11 @@ function SingleBook({title, author, releaseDate, id, index, lastChild}) {
           </div>
           <div>
             <BookButton>
-              <MdOutlineStarOutline/>
+              <MdOutlineBookmarkBorder/>
             </BookButton>
+          </div>
+          <div>
+
           </div>
         </div>
       </div>

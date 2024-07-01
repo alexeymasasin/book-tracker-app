@@ -10,6 +10,13 @@
   transition: all 0.65s;
 }
 
+.ui:active {
+  transform: scale(0.85);
+}
+
+.ui:focus {
+}
+
 .r180 {
   transform: rotate(180deg);
 }
