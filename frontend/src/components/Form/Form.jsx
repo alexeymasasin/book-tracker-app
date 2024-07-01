@@ -4,6 +4,7 @@ import {addBook} from '../../redux/books/actionCreators';
 import {v4 as uuidv4} from 'uuid';
 import styles from './Form.module.css';
 import {useTranslation} from 'react-i18next';
+import booksData from './../../data/books.json';
 
 const Form = () => {
   const [title, setTitle] = useState('');
@@ -34,6 +35,16 @@ const Form = () => {
     }
   };
 
+  const handleAddRandomBook = () => {
+    const randomIndex = Math.floor(Math.random() * booksData.length);
+    const randomBook = booksData[randomIndex];
+    const book = {
+      ...randomBook,
+      id: uuidv4(),
+    };
+    dispatch(addBook(book));
+  };
+
   return (
     <div className={`form ${styles.window}`}>
       <div className={styles.heading}>
@@ -60,6 +71,10 @@ const Form = () => {
                   ? styles.disabled : ''}
                 type="submit" title={t('ADD_NEW_BOOK')}>
           {t('ADD_BOOK')}
+        </button>
+        <button onClick={handleAddRandomBook}
+                className={styles.random_book_btn}>
+          {t('ADD_RANDOM_BOOK')}
         </button>
       </form>
     </div>

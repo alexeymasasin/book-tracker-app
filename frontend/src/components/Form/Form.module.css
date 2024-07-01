@@ -68,16 +68,23 @@
 
 }
 
-.window > form button:focus {
-  box-shadow: var(--window_shadow);
-  outline: 1px solid var(--accent_color);
+.window > form button:active {
+  transform: scale(0.975);
 }
 
-.window > form button:active {
+.random_book_btn {
+  background-color: transparent !important;
+  padding: 0 !important;
+  margin: -6px 0 0 !important;
+  font-size: 0.8rem !important;
+  color: var(--text_color_secondary) !important;
 }
 
 @media (hover: hover) {
 
+  .random_book_btn:hover {
+    color: var(--text_color_primary) !important;
+  }
 }
 
 @media (hover: none) {
