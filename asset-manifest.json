@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/book-tracker-app/static/css/main.04204fac.css",
+    "main.js": "/book-tracker-app/static/js/main.6e83bedd.js",
+    "index.html": "/book-tracker-app/index.html",
+    "main.04204fac.css.map": "/book-tracker-app/static/css/main.04204fac.css.map",
+    "main.6e83bedd.js.map": "/book-tracker-app/static/js/main.6e83bedd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04204fac.css",
+    "static/js/main.6e83bedd.js"
+  ]
+}
