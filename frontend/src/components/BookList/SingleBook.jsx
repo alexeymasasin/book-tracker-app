@@ -32,12 +32,13 @@ function SingleBook({title, author, releaseDate, id, index, lastChild}) {
         </div>
         <div className={styles.actions}>
           <div>
-            <BookButton onClick={() => deleteBookHandler(id)}>
+            <BookButton type="delete_book"
+                        onClick={() => deleteBookHandler(id)}>
               <MdOutlineDeleteOutline/>
             </BookButton>
           </div>
           <div>
-            <BookButton>
+            <BookButton type="bookmark_book">
               <MdOutlineBookmarkBorder/>
             </BookButton>
           </div>

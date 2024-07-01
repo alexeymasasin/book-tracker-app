@@ -14,12 +14,30 @@
   transform: scale(0.9);
 }
 
+.ui:active {
+  transform: scale(0.9);
+}
+
+.bookmark_book:active {
+  color: var(--fav_color);
+  transform: scale(0.95) !important;
+}
+
+.delete_book:active {
+  color: var(--delete_color);
+  transform: scale(0.95) !important;
+}
+
 @media (hover: hover) {
   .ui:hover {
     transform: scale(1.1);
   }
 
-  .ui:active {
-    transform: scale(0.9);
+  .bookmark_book:hover {
+    color: var(--fav_color);
+  }
+
+  .delete_book:hover {
+    color: var(--delete_color);
   }
 }
