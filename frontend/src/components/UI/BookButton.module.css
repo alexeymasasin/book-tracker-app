@@ -18,6 +18,10 @@
   transform: scale(0.9);
 }
 
+.is_favorite {
+  color: var(--fav_color);
+}
+
 .bookmark_book:active {
   color: var(--fav_color);
   transform: scale(0.95) !important;

@@ -22,7 +22,8 @@ const BookList = () => {
                 <SingleBook title={book.title} author={book.author}
                             releaseDate={book.releaseDate}
                             key={book.id} id={book.id} index={i}
-                            lastChild={i === books.length - 1}/>
+                            lastChild={i === books.length - 1}
+                            isFavorite={book.isFavorite}/>
               ))}
             </ul>
         }

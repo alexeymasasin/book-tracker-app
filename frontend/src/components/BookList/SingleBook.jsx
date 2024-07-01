@@ -1,17 +1,29 @@
 import styles from './SingleBook.module.css';
 import {useTranslation} from 'react-i18next';
-import {deleteBook} from '../../redux/books/actionCreators';
+import {deleteBook, toggleFavorite} from '../../redux/books/actionCreators';
 import {useDispatch} from 'react-redux';
 import {MdOutlineBookmarkBorder, MdOutlineDeleteOutline} from 'react-icons/md';
 import BookButton from '../UI/BookButton';
 
-function SingleBook({title, author, releaseDate, id, index, lastChild}) {
+function SingleBook({
+  title,
+  author,
+  releaseDate,
+  id,
+  index,
+  lastChild,
+  isFavorite,
+}) {
   const {t} = useTranslation();
 
   const dispatch = useDispatch();
 
   const deleteBookHandler = (bookId) => {
     dispatch(deleteBook(bookId));
+  };
+
+  const toggleFavoriteHandler = (bookId) => {
+    dispatch(toggleFavorite(bookId));
   };
 
   return (
@@ -32,18 +44,19 @@ function SingleBook({title, author, releaseDate, id, index, lastChild}) {
         </div>
         <div className={styles.actions}>
           <div>
-            <BookButton type="delete_book"
-                        onClick={() => deleteBookHandler(id)}>
-              <MdOutlineDeleteOutline/>
-            </BookButton>
-          </div>
-          <div>
-            <BookButton type="bookmark_book">
+            <BookButton onClick={() => toggleFavoriteHandler(id)}
+                        type="bookmark_book" isFavorite={isFavorite}>
               <MdOutlineBookmarkBorder/>
             </BookButton>
           </div>
           <div>
 
+          </div>
+          <div>
+            <BookButton type="delete_book"
+                        onClick={() => deleteBookHandler(id)}>
+              <MdOutlineDeleteOutline/>
+            </BookButton>
           </div>
         </div>
       </div>

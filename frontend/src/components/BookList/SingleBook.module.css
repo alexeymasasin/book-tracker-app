@@ -15,7 +15,11 @@ li {
 }
 
 .info {
-  width: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
 }
 
 .last_child {
