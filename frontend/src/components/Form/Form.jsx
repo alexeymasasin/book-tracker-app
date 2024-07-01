@@ -41,6 +41,7 @@ const Form = () => {
     const book = {
       ...randomBook,
       id: uuidv4(),
+      releaseDate: randomBook.year,
     };
     dispatch(addBook(book));
   };
