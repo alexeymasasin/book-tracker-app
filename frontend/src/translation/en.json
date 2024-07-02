@@ -11,5 +11,6 @@
   "TURN_LIGHT": "Switch to light mode",
   "TURN_DARK": "Switch to Dark mode",
   "CHANGE_LANGUAGE": "Switch language to Russian",
-  "ADD_RANDOM_BOOK": "Random book"
+  "ADD_RANDOM_BOOK": "Random book",
+  "FILTER_BY_TITLE": "Filter by title..."
 }

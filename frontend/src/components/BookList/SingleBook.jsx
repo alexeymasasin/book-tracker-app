@@ -41,9 +41,9 @@ function SingleBook({
   };
 
   return (
-    <motion.li initial={{opacity: 0}}
-               animate={{opacity: 1}}
-               exit={{opacity: 0}} duration={1000}>
+    <motion.li initial={{opacity: 0, height: 0}}
+               animate={{opacity: 1, height: 'auto'}}
+               exit={{opacity: 0, height: 0}} transition={{type: 'tween'}}>
       <div
         className={`${styles.wrapper} ${lastChild ? styles.last_child : ''}`}>
         <div className={styles.info}>
@@ -60,10 +60,17 @@ function SingleBook({
         </div>
         <div className={styles.actions}>
           <div>
-            <BookButton onClick={() => toggleFavoriteHandler(id)}
-                        type="bookmark_book" isFavorite={isFavorite}>
-              {isFavorite ? <MdFavorite/> : <MdFavoriteBorder/>}
-            </BookButton>
+            {isFavorite ?
+              <BookButton onClick={() => toggleFavoriteHandler(id)}
+                          type="bookmark_book" key="bookmark_book_fav"
+                          isFavorite={isFavorite}><MdFavorite/>
+              </BookButton>
+              :
+              <BookButton onClick={() => toggleFavoriteHandler(id)}
+                          type="bookmark_book" key="bookmark_book_notfav"
+                          isFavorite={isFavorite}><MdFavoriteBorder/>
+              </BookButton>
+            }
           </div>
           <div>
             <BookButton type="rate_book"

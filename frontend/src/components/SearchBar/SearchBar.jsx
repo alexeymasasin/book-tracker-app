@@ -1,9 +1,11 @@
 import styles from './SearchBar.module.css';
+import {useTranslation} from 'react-i18next';
 
 const SearchBar = () => {
+  const {t} = useTranslation();
   return (
     <div className={`search-bar ${styles.window}`}>
-      <h2>Search bar</h2>
+      <input type="text" placeholder={t('FILTER_BY_TITLE')}/>
     </div>
   );
 };
