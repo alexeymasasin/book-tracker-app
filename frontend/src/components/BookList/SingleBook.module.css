@@ -15,7 +15,7 @@ li {
 }
 
 .info {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -46,4 +46,24 @@ li {
 
 .index {
   font-weight: 500;
+}
+
+.actions {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1px;
+  align-items: center;
+}
+
+.rating {
+
+}
+
+@media (max-width: 650px) {
+  .wrapper p {
+    font-size: 1.35rem;
+  }
+
 }

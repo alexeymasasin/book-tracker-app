@@ -13,6 +13,15 @@ const booksReducer = (state = initialState, action) => {
         book.id === action.payload
           ? {...book, isFavorite: !book.isFavorite}
           : book);
+    case a.RATE_BOOK:
+      return state.map(book =>
+        book.id === action.payload
+          ? {
+            ...book,
+            rating: book.rating < 10 ? book.rating + 1 : 1,
+          }
+          : book,
+      );
     default:
       return state;
   }

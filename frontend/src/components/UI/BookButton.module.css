@@ -8,6 +8,7 @@
   cursor: pointer;
   font-size: 2rem;
   transition: all 0.25s;
+  user-select: none;
 }
 
 .ui:active {
@@ -19,16 +20,27 @@
 }
 
 .is_favorite {
-  color: var(--fav_color);
+  color: var(--accept_color);
+}
+
+.rate_book {
+  font-weight: 400;
+  cursor: pointer;
+  display: block;
 }
 
 .bookmark_book:active {
-  color: var(--fav_color);
+  color: var(--accept_color);
   transform: scale(0.95) !important;
 }
 
 .delete_book:active {
   color: var(--delete_color);
+  transform: scale(0.95) !important;
+}
+
+.rate_book:active {
+  color: var(--rate_color) !important;
   transform: scale(0.95) !important;
 }
 
@@ -38,10 +50,14 @@
   }
 
   .bookmark_book:hover {
-    color: var(--fav_color);
+    color: var(--accept_color);
   }
 
   .delete_book:hover {
     color: var(--delete_color);
+  }
+
+  .rate_book:hover {
+    color: var(--rate_color);
   }
 }

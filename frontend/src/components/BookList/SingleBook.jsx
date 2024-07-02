@@ -1,8 +1,16 @@
 import styles from './SingleBook.module.css';
 import {useTranslation} from 'react-i18next';
-import {deleteBook, toggleFavorite} from '../../redux/books/actionCreators';
+import {
+  deleteBook,
+  rateBook,
+  toggleFavorite,
+} from '../../redux/books/actionCreators';
 import {useDispatch} from 'react-redux';
-import {MdOutlineBookmarkBorder, MdOutlineDeleteOutline} from 'react-icons/md';
+import {
+  MdFavorite,
+  MdFavoriteBorder,
+  MdOutlineDeleteOutline,
+} from 'react-icons/md';
 import BookButton from '../UI/BookButton';
 import {motion} from 'framer-motion';
 
@@ -12,6 +20,7 @@ function SingleBook({
   releaseDate,
   id,
   index,
+  rating,
   lastChild,
   isFavorite,
 }) {
@@ -25,6 +34,10 @@ function SingleBook({
 
   const toggleFavoriteHandler = (bookId) => {
     dispatch(toggleFavorite(bookId));
+  };
+
+  const rateBookHandler = (bookId) => {
+    dispatch(rateBook(bookId));
   };
 
   return (
@@ -49,11 +62,14 @@ function SingleBook({
           <div>
             <BookButton onClick={() => toggleFavoriteHandler(id)}
                         type="bookmark_book" isFavorite={isFavorite}>
-              <MdOutlineBookmarkBorder/>
+              {isFavorite ? <MdFavorite/> : <MdFavoriteBorder/>}
             </BookButton>
           </div>
           <div>
-
+            <BookButton type="rate_book"
+                        onClick={() => rateBookHandler(id)}>
+              {rating}
+            </BookButton>
           </div>
           <div>
             <BookButton type="delete_book"

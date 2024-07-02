@@ -25,7 +25,7 @@ const Form = () => {
         title: capitalize(title.trim()),
         author: capitalize(author.trim()),
         releaseDate: releaseDate.trim(),
-        rating: 0,
+        rating: '?',
         isFavorite: false,
         id: uuidv4(),
       };
@@ -43,7 +43,7 @@ const Form = () => {
       ...randomBook,
       id: uuidv4(),
       isFavorite: false,
-      rating: 0,
+      rating: '?',
       releaseDate: randomBook.year,
     };
     dispatch(addBook(book));

@@ -20,3 +20,10 @@ export const toggleFavorite = (bookId) => {
     payload: bookId,
   };
 };
+
+export const rateBook = (bookId) => {
+  return {
+    type: a.RATE_BOOK,
+    payload: bookId,
+  };
+};

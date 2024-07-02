@@ -19,15 +19,16 @@ const BookList = () => {
           books.length === 0 ?
             <p>{t('NO_BOOKS_AVAILABLE')}</p> :
             <motion.ul>
-              {books.map((book, i) => (
-                <AnimatePresence>
+              <AnimatePresence>
+                {books.map((book, i) => (
                   <SingleBook title={book.title} author={book.author}
                               releaseDate={book.releaseDate}
                               key={book.id} id={book.id} index={i}
                               lastChild={i === books.length - 1}
-                              isFavorite={book.isFavorite}/>
-                </AnimatePresence>
-              ))}
+                              isFavorite={book.isFavorite}
+                              rating={book.rating}/>
+                ))}
+              </AnimatePresence>
             </motion.ul>
         }
       </div>
