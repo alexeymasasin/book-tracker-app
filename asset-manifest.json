@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/book-tracker-app/static/css/main.6eeb46c2.css",
-    "main.js": "/book-tracker-app/static/js/main.c7320413.js",
+    "main.css": "/book-tracker-app/static/css/main.9f50bb4d.css",
+    "main.js": "/book-tracker-app/static/js/main.20ec5a60.js",
     "index.html": "/book-tracker-app/index.html",
-    "main.6eeb46c2.css.map": "/book-tracker-app/static/css/main.6eeb46c2.css.map",
-    "main.c7320413.js.map": "/book-tracker-app/static/js/main.c7320413.js.map"
+    "main.9f50bb4d.css.map": "/book-tracker-app/static/css/main.9f50bb4d.css.map",
+    "main.20ec5a60.js.map": "/book-tracker-app/static/js/main.20ec5a60.js.map"
   },
   "entrypoints": [
-    "static/css/main.6eeb46c2.css",
-    "static/js/main.c7320413.js"
+    "static/css/main.9f50bb4d.css",
+    "static/js/main.20ec5a60.js"
   ]
 }
