@@ -27,10 +27,6 @@ li {
   border-bottom-right-radius: 10px;
 }
 
-.wrapper:hover {
-  background-color: var(--selection_color);
-}
-
 .wrapper p {
   display: inline;
 }
@@ -65,5 +61,10 @@ li {
   .wrapper p {
     font-size: 1.35rem;
   }
+}
 
+@media (hover: hover) {
+  .wrapper:hover {
+    background-color: var(--selection_color);
+  }
 }

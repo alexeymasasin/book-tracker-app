@@ -19,7 +19,7 @@ const BookList = () => {
           books.length === 0 ?
             <p>{t('NO_BOOKS_AVAILABLE')}</p> :
             <motion.ul>
-              <AnimatePresence>
+              <AnimatePresence mode="popLayout">
                 {books.map((book, i) => (
                   <SingleBook title={book.title} author={book.author}
                               releaseDate={book.releaseDate}
